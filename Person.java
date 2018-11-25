@@ -1,12 +1,12 @@
-import java.io.Serializable;
+package Checkers;
 
 /**
  * Created by CianC on 17/11/2018.
  */
-public abstract class Person implements PlayerMoves, Serializable {
+public abstract class Person implements PlayerNames{
     private String name;
 
-    public Person() {this("Unknown");
+    Person() {this("Unknown");
     }
 
     Person(String name) {

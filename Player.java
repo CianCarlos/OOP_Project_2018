@@ -1,29 +1,26 @@
-import java.io.Serializable;
+package Checkers;
 
-public class Player extends Person implements Serializable{
+public class Player extends Person{
     private int piecesLeft, piecesTaken;
-
-    public Player() {
-        this("Unknown");
-    }
 
     public Player(String name) {
         super(name);
-        setPiecesLeft(12);
-        setPiecesTaken(12);
+        setPiecesLeft();
+        setPiecesTaken();
+
     }
     public int getPiecesLeft() {return piecesLeft;}
 
-    public void setPiecesLeft(int piecesLeft) {
-        this.piecesLeft = piecesLeft;
+    private void setPiecesLeft() {
+        this.piecesLeft = 12;
     }
 
     public int getPiecesTaken() {
         return piecesTaken;
     }
 
-    public void setPiecesTaken(int piecesTaken) {
-        this.piecesTaken = piecesTaken;
+    private void setPiecesTaken() {
+        this.piecesTaken = 0;
     }
 
     public String toString() {
